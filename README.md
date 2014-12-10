@@ -20,5 +20,10 @@ Run the program via executable.  This way it can be done using flags.
 ```
 The default flags will start the program with 4 workers and at localhost:8000.
 
+To check it out in action, you can try this simple bash script:
+```
+for i in {1..1000}; do curl localhost:8000/work -d name=<NAME HERE> -d delay=$(expr $i % 10 + 1)s; done
+```
+
 ##Contributors
 * **Gian Biondi** <gian@namely.com>
